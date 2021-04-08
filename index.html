@@ -13,7 +13,7 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <a href="#" class="main-header-logo">
+      <a href="index.html" class="main-header-logo">
         <img src="img/index-logo.svg" alt="Логотип барбершоп">
       </a>
       <div class="main-navigation-wrapper">
@@ -119,7 +119,7 @@
           Пн—Пт: С 10:00 ДО 22:00 <br>
           Сб—Вс: С 10:00 ДО 19:00 
         </p>
-        <button type="button" class="button">Как проехать</button>
+        <button type="button" class="button button-map">Как проехать</button>
         <button type="button" class="button">Обратная связь</button>
       </section>
       
@@ -192,20 +192,21 @@
     
   </footer>
 
-  <!--Pop-ups-->
+  
   <section class="modal modal-login">
     <h2>Личный кабинет</h2>
-    <p>Введите свой логин и пароль</p>
+    <p class="modal-description">Введите свой логин и пароль</p>
     <form method="POST" class="login-form">
       <p>
         <label class="visually-hidden" for="user-login">Логин</label>
-        <input class="login-icon-user" id="user-login" type="email" name="login" placeholder="email@example.com">
+        <input class="login-icon-user" id="user-login" type="text" name="login" 
+        placeholder="email@example.com">
       </p>
       <p>
         <label class="visually-hidden" for="user-password">Пароль</label>
         <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="••••••••••">
       </p>
-      <p class="login-password-info">
+      <p class="login-help">
         <label class="login-checkbox">
           <input class="visually-hidden" type="checkbox" name="remember">
           <span class="checkbox-indicator"></span>
@@ -215,14 +216,20 @@
       </p>
       <button type="submit" class="button">Войти</button>
     </form>
-    <button type="button" class="modal-close">Закрыть</button>
+    <button type="button" class="modal-close close-login">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <!--Карта-->
-    <button type="button" class="modal-close">Закрыть</button>
+    <iframe class="location-map" src="https://yandex.ru/map-widget/v1/-/CBQJiVTrHC" width="766" height="560"></iframe>
+    <button type="button" class="modal-close close-map">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    
   </section>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
